@@ -1,0 +1,62 @@
+<app-header></app-header>
+<ng-container *ngIf="wproducts.length !=0">
+    <div class="container align-items-center my-5">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of wproducts; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img src="{{item.image}}" [ngClass]="'item-img'"></td>
+                            <td>{{item.description}} </td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>{{item.total}}</td>
+
+                            <td> <button class="btn btn-danger bg-danger" (click)=" removeItem(item)">Remove</button>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+                <button [ngClass]="'backtoproducts btn-hover color-1 text-center btn'"><a routerLink="/products"
+                        class="text-white gotoshop">Go to Shop page</a></button>
+
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+<ng-container *ngIf="wproducts.length ==0">
+    <div class="container text-center">
+        <div class="card card2 card-2" [ngStyle]='{"height":"500px"}'>
+            <h5 class="card-title">My Wishlist</h5>
+
+            <div class="center">
+                <h4>No Item Added in Wishlist</h4>
+                <img src="../../../assets/images/empty-wishlist.png" [ngStyle]='{"width":"300px"}'>
+                <h6>add items now</h6>
+                <button routerLink="/products" class="btn-hover color-8">
+                    Shop now
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>

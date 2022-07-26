@@ -1,0 +1,116 @@
+
+<app-header></app-header>
+<div class="container text-center">
+   
+    <h3>welcome to Dashboard <span [ngClass]="'admin-username-color'"><i>{{
+                email_from_local}}{{name_from_local}}</i></span></h3>
+    <p>You are logged in as <span [ngClass]="'admin-username-color'"><strong>{{ role_from_local}}</strong></span></p>
+    <p>Go to <strong><a routerLink='/products'>shop</a></strong></p>
+    <h3 class="text-enter">All Users List</h3></div>
+
+    <div class="container align-items-center my-5">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-lg-3">ID</th>
+                            <th class="col-lg-2">MOBILE</th>
+                            <th class="col-lg-3">EMAIL</th>
+                            <th class=" col-lg-2">ADDRESS</th>
+                            <th class="col-lg-3">PASSWORD</th>
+                            <th class="col-lg-2">ROLE</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr *ngFor="let userdetails of allusers">
+                                <th scope="row">{{userdetails.id}}</th>
+                                <td>{{userdetails.mobile}}</td>
+                                <td>{{userdetails.email}}</td>
+                                <td>{{userdetails.address}}</td>
+                                <td>{{userdetails.pass}}</td>
+                                <td>{{userdetails.role}}</td>
+                            </tr>
+
+
+                    </tbody>
+
+
+                    
+
+                </table>
+
+                <button [ngClass]="'backtoproducts btn-hover color-1 text-center btn'"><a routerLink="/products"
+                        class="text-white gotoshop">Go to Shop page</a></button>
+
+            </div>
+        </div>
+    </div>
+  
+                <button [ngClass]="'backtoproducts btn-hover color-1 text-center btn'"><a routerLink="/products"
+                        class="text-white gotoshop">Go to Shop page</a></button>
+
+                    
+
+
+
+
+<div class="bg-i mb-10">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-12 col-sm-12  col-lg-12">
+                <div class="card  addProductsForm">
+                    <div class="text-center">
+                        <h1 class="text-white">Add new Product</h1>
+                    </div>
+                    <form class="register-f" [formGroup]="AddproductForm" (ngSubmit)="addProduct()">
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" title="title" formControlName="title"
+                                    placeholder="please enter Product title" [(ngModel)]="title">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="number" class="form-control col-md-8" price="price" formControlName="price"
+                                    [(ngModel)]="price" placeholder="please enter Product price">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" description="description"
+                                    formControlName="description" [(ngModel)]="description"
+                                    placeholder="please enter Product description">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="file" class="form-control col-md-8" image="image" formControlName="image"
+                                    [(ngModel)]="image" placeholder="please add image">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="number" class="form-control col-md-8" rating="rating"
+                                    formControlName="rating" [(ngModel)]="rating" placeholder="please add rating">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row d-flex text-center btn-rw">
+                                <input type="submit" name="submit" value="Add product"
+                                    class="btn regi-btn m-2 btn-hover color-2">
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div></div></div>
+
+       <br><br>
+        <app-footer></app-footer>

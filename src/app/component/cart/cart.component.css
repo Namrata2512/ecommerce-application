@@ -1,0 +1,12 @@
+.item-img{
+    height: 100px;
+    width: 100px;
+}
+button{
+    width: 150px;
+}
+.card{
+    display: inline-block;
+    position:static;
+    padding: 5%;
+}

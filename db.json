@@ -1,0 +1,95 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "user1",
+      "role": "admin",
+      " mobile": "11111111111",
+      "mail": "user1@gmail.com",
+      "pass": 123
+    },
+    {
+      "id": 2,
+      "name": "user1",
+      "role": "user",
+      " mobile": "2222222222",
+      "mail": "admin1@gmail.com",
+      "pass": 456
+    }
+  ],
+  "signupusers": [
+    {
+      "fullname": "test",
+      "mobile": 999999999,
+      "email": "test@gmail.com",
+      "password": "test@12",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "fullname": "test2",
+      "mobile": 555555555,
+      "email": "test2@gmail.com",
+      "password": "test2",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "fullname": "test3",
+      "mobile": 999999999,
+      "email": "test3@gmail.com",
+      "password": "test3",
+      "role": "admin",
+      "id": 3
+    },
+    {
+      "fullname": "test4",
+      "mobile": 2649849,
+      "email": "k@gmail.com",
+      "password": "test4",
+      "role": "admin",
+      "id": 4
+    },
+    {
+      "fullname": "test5",
+      "mobile": 888888,
+      "email": "test5@gmail.com",
+      "password": "test5",
+      "role": "admin",
+      "id": 5
+    },
+    {
+      "fullname": "h",
+      "mobile": 999999999999,
+      "email": "n@gmail.com",
+      "password": "223",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "fullname": "test6",
+      "mobile": 999999999,
+      "email": "k@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

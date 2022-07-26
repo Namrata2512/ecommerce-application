@@ -1,0 +1,147 @@
+.item-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+body {
+    background: aquamarine !important;
+    background-color: #0d6efd !important;
+}
+
+.card img {
+    /* width: 200px;
+    height: 200px; */
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card {
+    padding: 5px;
+    /* margin: 30px; */
+    cursor: pointer;
+    border: none;
+
+}
+
+.card-top {
+    background-color: #232f3e;
+    color: #ffffff;
+    z-index: -1 !important;
+
+}
+
+
+.add-to-cart {
+    background-color: #131921;
+
+}
+
+.add-to-cart:hover {
+    color: #131921;
+    background-color: #ffa41c;
+    border: #ffd814;
+    font-weight: bold;
+}
+
+.item {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 0;
+    padding: 10px;
+}
+
+.item:hover {
+    border: 1px solid #ffffff;
+}
+
+.img-bg {
+    height: 60px;
+    width: 60px;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 20%;
+    z-index: 1;
+    position: absolute;
+}
+
+.add-to-wishlist {
+    background-color: #ff511c;
+    border: #ff601c;
+}
+
+.add-to-wishlist:hover {
+    background-color: #131921;
+    border: #131921;
+}
+
+.fa {
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+@media(min-width:320px) {
+    .card img {
+        width: 200px;
+        height: 200px;
+        padding: 3%;
+    }
+
+    .p-grid {
+        padding: 10%;
+
+    }
+}
+
+@media(min-width:768px) {
+    .card img {
+        width: 120px;
+        height: 200px;
+        padding: 5%;
+    }
+
+    .p-grid {
+        padding: 7%;
+
+    }
+}
+
+@media(min-width:1024px) {
+    .card img {
+        width: 200px;
+        height: 200px;
+        padding: 7%;
+    }
+
+    div.item {
+        display: inline-block;
+
+    }
+
+    .p-grid {
+        padding: 10%;
+        /* border: 2px solid grey; */
+        margin: 5%;
+    }
+}
+
+.p-grid {
+
+    /* border: 2px solid grey; */
+}
+
+.card-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}

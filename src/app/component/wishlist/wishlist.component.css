@@ -1,0 +1,50 @@
+.item-img {
+    width: 200px;
+    height: 200px;
+}
+
+thead {
+    color: #FFF;
+    font-weight: 700;
+    background: #9b4085;
+    background: -moz-linear-gradient(-45deg, #9b4085 0%, #608590 100%);
+    background: -webkit-linear-gradient(-45deg, #9b4085 0%, #608590 100%);
+    background: linear-gradient(135deg, #9b4085 0%, #608590 100%);
+    white-space: nowrap;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 0px solid #FFF;
+}
+
+
+.buttons {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.card {
+    display: inline-block;
+    position: static;
+    padding: 5%;
+}
+
+.btn-hover {
+    height: 50px;
+}
+
+.gotoshop {
+    text-decoration: none;
+}

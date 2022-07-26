@@ -1,0 +1,72 @@
+<div class="bg-i">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 align-middle">
+                <div class="card c1">
+                    <div class="text-center">
+                        <h1 class="text-white">Register Here</h1>
+                    </div>
+                    <form [formGroup]="regiform" (ngSubmit)="submit()" class="register-f">
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" name="name" [(ngModel)]="name"
+                                    formControlName="name" placeholder="please enter your name">
+                                <span class="errormessage"
+                                    *ngIf="regiform.get('name')?.errors?.['required ']&& regiform.get('name')?.touched">please
+                                    enter your name</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control   col-md-8" name="mobile" [(ngModel)]="mobile"
+                                    formControlName="mobile" placeholder="please enter your mobile number">
+                                <span class="errormessage"
+                                    *ngIf="regiform.get('mobile')?.errors?.['required'] && regiform.get('mobile')?.touched">please
+                                    enter your mobile no.</span>
+                                <span class="errormessage" *ngIf="regiform.get('mobile')?.errors?.['maxlength'] ">please
+                                    enter 10 characters</span>
+                                <span class="errormessage" *ngIf="regiform.get('mobile')?.errors?.['minlength'] ">please
+                                    enter min 5 digit & maximum 10 digit</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" name="email" [(ngModel)]="email"
+                                    formControlName="email" placeholder="please enter your email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <textarea class="form-control col-md-8" name="address" [(ngModel)]="address"
+                                    formControlName="address" placeholder="addresss"></textarea>
+                                <span class="errormessage"
+                                    *ngIf="regiform.get('address')?.errors?.['required'] && regiform.get('address')?.touched">please
+                                    enter your address</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" name="pass" [(ngModel)]="pass"
+                                    formControlName="pass" placeholder="password">
+                                <span class="errormessage"
+                                    *ngIf="regiform.get('pass')?.errors?.['required ']&& regiform.get('pass')?.touched">please
+                                    enter correct password</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <input type="text" class="form-control col-md-8" name="role" [(ngModel)]="role"
+                                    formControlName="role" placeholder="role">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row d-flex text-center btn-rw">
+                                <input type="submit" name="submit" value="Sign up" class="btn regi-btn m-2">
+                            </div>
+                        </div>
+                    </form>
+                    <a routerLink="/login" class="text-white text-center mt-2">Already have account?Click to login!!</a>
+                </div>
+            </div>
+        </div>

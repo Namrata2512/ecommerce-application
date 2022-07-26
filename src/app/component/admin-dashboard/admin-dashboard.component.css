@@ -1,0 +1,11 @@
+.admin-username-color{
+    color: orangered;
+}
+@media(min-width:1024px){
+    .usertbl{
+        width: 40%;
+        margin: auto;
+    }
+ 
+
+}

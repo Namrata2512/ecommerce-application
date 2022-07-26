@@ -1,0 +1,36 @@
+input.ng-invalid.ng-touched{
+    border-bottom:3px solid red;
+}
+
+
+input.ng-valid.ng-touched{
+    border-bottom:3px solid green;
+}
+textarea.ng-valid.ng-touched{
+    border-bottom:3px solid  green;
+}
+
+textarea.ng-invalid.ng-touched{
+    border-bottom: 3px solid red;
+}
+
+.errormessage{
+    color:red;
+}
+.form-row{
+    width: 50%;
+    margin: auto;
+}
+/* .bg{
+	
+    background: url('../..assets/images/bg.jpg');
+       background-size: cover;
+    } */
+    button{
+        background-color: #131921;
+        color: #ffff;
+    }
+    label{
+        color: #ffff;
+    }
+  

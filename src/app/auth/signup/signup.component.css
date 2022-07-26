@@ -1,0 +1,54 @@
+input.ng-invalid.ng-touched {
+    border-bottom: 3px solid red;
+}
+
+
+input.ng-valid.ng-touched {
+    border-bottom: 3px solid green;
+}
+
+textarea.ng-valid.ng-touched {
+    border-bottom: 3px solid green;
+}
+
+textarea.ng-invalid.ng-touched {
+    border-bottom: 3px solid red;
+}
+
+.errormessage {
+    color: red;
+}
+
+.bg {
+
+    background: url('/assets/images/bg.jpg');
+    background-size: cover;
+}
+
+.login-btn,
+.regi-btn {
+    background-color: #131921;
+    width: 100px;
+    color: #ffffff;
+    margin-top: 40px !important;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+}
+
+.btn-rw {
+    width: 50%;
+    margin: auto;
+}
+
+.login-btn:hover,
+.regi-btn:hover {
+    color: #131921;
+    background-color: #ffa41c;
+    border: #ffd814;
+    font-weight: bold;
+
+}

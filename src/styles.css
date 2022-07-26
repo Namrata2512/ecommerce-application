@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+
+
+.errormessage{
+    color:rgb(0, 255, 4);
+    font-weight: 900;
+}
+.c2{
+    background: linear-gradient(to top, #6699ff 11%, #666699 100%);
+}
+.addProductsForm {
+    border:none;
+        padding: 40px;
+        margin: auto;
+    background: rgb(105,155,200);
+    background: -moz-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%, rgba(181,197,216,1) 57%);
+     background: -webkit-gradient(radial, top left, 0px, top left, 100%, color-stop(0%,rgba(105,155,200,1)), color-stop(57%,rgba(181,197,216,1)));
+     background: -webkit-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
+     background: -o-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
+     background: -ms-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
+     background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#699bc8', endColorstr='#b5c5d8',GradientType=1 );
+    }
+.login-btn,.regi-btn{
+    background-color: #131921;
+    width: 100px;
+    color: #ffffff;
+    margin-top: 40px !important;
+}
+.login-btn:hover, .regi-btn:hover{
+    color: #131921;
+    background-color: #ffa41c;
+    border: #ffd814;
+    font-weight: bold;}
+    .btn-hover {
+       
+        /* width:250px; */
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: auto;
+        /* height: 55px; */
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+    
+        border-radius: 10px;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    
+    .btn-hover:hover {
+        background-position: 100% 0;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .btn-hover:focus {
+        outline: none;
+    }
+    .btn-hover.color-8 {
+        background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+        box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+        cursor: pointer;
+    }
+    .btn-hover.color-2 {
+        background-image: linear-gradient(to right, #ffa41c, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+    }
+    .card-2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+      .card2 {
+        background: #fff;
+        border-radius: 2px;
+        display: inline-block;
+        height: 300px;
+        margin: 1rem;
+        position: relative;
+        width: 300px;
+      }
+@media(min-width:1024px) {
+    .card{
+        width: 500px;
+    } 
+    .c1{
+ 
+        border:none;
+        padding: 40px;
+        position:absolute;
+        top:20%;
+        background: linear-gradient(to top left, #9966ff 0%, #ff99cc 100%);
+        background: linear-gradient(to bottom, #cc00ff 0%, #6600cc 100%);
+        margin: auto;
+        transform: translate(50%, -10%);
+    
+    }
+    .btn-hover {
+       
+        width:250px;}
+}
+@media(min-width:771px) and (max-width:1023px) {
+
+}
+@media(min-width:320px) {
+    .c1{
+ 
+        border:none;
+        padding: 40px;
+        position:static;
+        /* top:20%; */
+        background: linear-gradient(to top left, #9966ff 0%, #ff99cc 100%);
+        background: linear-gradient(to bottom, #cc00ff 0%, #6600cc 100%);
+        margin: auto;
+    
+    }
+    .btn-hover {
+       
+        width:100%;}
+}

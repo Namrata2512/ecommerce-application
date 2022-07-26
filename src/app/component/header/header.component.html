@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark  text-white shadow-sm">
+    <a class="navbar-brand text-white" href="/products">Ecommerce Application</a>
+    <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/admin-dashboard" [ngStyle]='{"text-decoration":"none"}'
+                    *ngIf="role_is_admin">Admin Dashboard </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/user-dashboard" [ngStyle]='{"text-decoration":"none"}'
+                    class="text-white" *ngIf="role_is_user">User Dashboard</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Date: {{localDate}}</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Product" [(ngModel)]="SearchTerm"
+                (keyup)="search($event)" aria-label="Search">
+        </form>
+        <li class="nav-item cart">
+            <a class="nav-link"><button routerLink="/cart" class="cart-btn btn"> <i
+                        class="fa fa-shopping-cart text-white mr-1" aria-hidden="true"></i>
+                    <div class="badge bg-danger">
+                        {{cartvalue_from_local}}
+                    </div>
+                </button></a>
+        </li>
+        <li class="nav-item cart">
+            <a class="nav-link"><button routerLink="/wishlist" class="wishlist-btn btn"> <i
+                        class="fa fa-heart text-white mr-1" aria-hidden="true"></i>
+                    <div class="badge bg-danger">
+                        {{ wishlistvalue_local}}
+                    </div>
+                </button></a>
+        </li>
+       
+        <!-- <div class="dropdownlist d-block"> -->
+            <!-- <li class="nav-item cart" id="h_clik">
+                <a class="nav-link"><button (click)="logout()" class="btn bg-danger"><i
+                            class="fa fa-user-circle-o text-white mr-1" aria-hidden="true"></i><i class="fa fa-caret-down text-white" aria-hidden="true"></i> <br>
+
+                    </button></a>
+            </li> -->
+            <!-- <div id="hideen">
+                <li class="nav-item item1"><a class="nav-link" routerLink="/admin-dashboard"
+                        [ngStyle]='{"text-decoration":"none"}' *ngIf="role_is_admin">Admin Dashboard </a></li>
+                <li class="nav-item item2"><a class="nav-link" routerLink="/user-dashboard"
+                        [ngStyle]='{"text-decoration":"none"}' *ngIf="role_is_user">User Dashboard </a></li>
+                <li class="nav-item cart" id="clk">
+                    <a class="nav-link" (click)="logout()">Logout
+                    </a>
+                </li>
+            </div> -->
+            <div class="dropdown">
+                <button class="dropbtn btn bg-danger" *ngIf="role_is_admin || role_is_user"><i
+                    class="fa fa-user-circle-o text-white mr-1" aria-hidden="true"></i><i class="fa fa-caret-down text-white" aria-hidden="true"></i> <br></button>
+                <div class="dropdown-content">
+                  <a routerLink="/admin-dashboard" *ngIf="role_is_admin">Admin Dashboard</a>
+                  <a routerLink="/user-dashboard"  *ngIf="role_is_user">User Dashboard</a>
+                  <a (click)="logout()" *ngIf="role_is_admin || role_is_user" >Logout</a>
+                </div>
+              </div>
+        </div>
+     
+    <!-- </div>  -->
+
+ </nav>

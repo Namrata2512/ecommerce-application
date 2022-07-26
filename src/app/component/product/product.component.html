@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="card-top container-fluid">
+    <div class="col-lg-12 col-sm-12 w-50">
+        <div class="item m-2" routerLink="/products" (click)=" filter('')">All products</div>
+        <div class="item m-2" routerLink="/products" (click)=" filter('electronics')">Electronics</div>
+        <div class="item m-2" routerLink="/products" (click)=" filter('fashion')">Fashion</div>
+        <div class="item m-2" routerLink="/products" (click)=" filter('jewelery')">Jewelry</div>
+    </div>
+</div>
+
+<div class="container p-5">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3 col-lg-3 col-sm-12 col-xl-3">
+                <div class="p-grid card-4">
+                    <img src="{{item.image}}" alt="" class="text-center">
+                    <h5 class="item-title">{{item.title | uppercase}}</h5>
+                    <p class="item-title">{{item.description}}</p>
+                    <p><strong>price</strong>{{item.price}}</p>
+                    <button class=" color-8 btn-hover mb-2" (click)=" addtoCart(item)"><i
+                            class="fa fa-shopping-cart text-white mr-1" aria-hidden="true"></i> Add to cart</button>
+                    <button class="btn-hover color-2  mt-2" [ngClass]="'add-to-wishlist'"
+                        (click)="addtoWishlist(item)"><i class="fa fa-heart text-white mr-1" aria-hidden="true"></i>Add
+                        to Wishlist</button>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+<app-footer></app-footer>
